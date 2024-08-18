@@ -19,29 +19,9 @@ void preOrder(Node *root)
 {
     if (root == NULL)
         return;
-
     cout << root->val << " ";
     preOrder(root->left);
     preOrder(root->right);
-}
-
-void postOrder(Node *root)
-{
-    if (root == NULL)
-        return;
-
-    postOrder(root->left);
-    postOrder(root->right);
-    cout << root->val << " ";
-}
-
-void inOrder(Node *root)
-{
-    if (root == NULL)
-        return;
-    inOrder(root->left);
-    cout << root->val << " ";
-    inOrder(root->right);
 }
 
 int main()
@@ -70,9 +50,6 @@ int main()
     h->right = i;
 
     preOrder(root);
-    cout << endl;
-    postOrder(root);
-    cout << endl;
-    inOrder(root);
+
     return 0;
 }
